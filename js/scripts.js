@@ -1,0 +1,1 @@
+document.getElementById("switchTheme").addEventListener("click",function(){let e=document.querySelector("html").classList;"dark"==localStorage.theme?(e.remove("dark"),localStorage.removeItem("theme")):(e.add("dark"),localStorage.theme="dark")});
