@@ -95,7 +95,7 @@ function prodHTML(){
 }
 
 function prodStyles(){
-  return src(`${options.paths.dist.css}/**/*`).pipe(purgecss({
+  return src(`${options.paths.src.css}/**/*`).pipe(purgecss({
     content: ['src/**/*.{html,js}'],
     defaultExtractor: content => {
       const broadMatches = content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || []
