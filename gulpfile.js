@@ -24,6 +24,7 @@ const uglify = require('gulp-uglify');//To Minify JS files
 const imagemin = require('gulp-imagemin'); //To Optimize Images
 const cleanCSS = require('gulp-clean-css');//To Minify CSS files
 const purgecss = require('gulp-purgecss');// Remove Unused CSS from Styles
+const tailwindcss = require('tailwindcss'); 
 
 //Note : Webp still not supported in majpr browsers including forefox
 //const webp = require('gulp-webp'); //For converting images to WebP format
@@ -54,7 +55,6 @@ function devHTML(){
 } 
 
 function devStyles(){
-  const tailwindcss = require('tailwindcss'); 
   return src(`${options.paths.src.css}/**/*`).pipe(sass().on('error', sass.logError))
     .pipe(postcss([
       tailwindcss(options.config.tailwindjs),
@@ -95,7 +95,14 @@ function prodHTML(){
 }
 
 function prodStyles(){
-  return src(`${options.paths.src.css}/**/*`).pipe(purgecss({
+  return src(`${options.paths.src.css}/**/*`)
+  .pipe(sass().on('error', sass.logError))
+  .pipe(postcss([
+    tailwindcss(options.config.tailwindjs),
+    require('autoprefixer'),
+  ]))
+  .pipe(concat({ path: 'style.css'}))
+  .pipe(purgecss({
     content: ['src/**/*.{html,js}'],
     defaultExtractor: content => {
       const broadMatches = content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || []
