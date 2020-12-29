@@ -6,11 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gulp with TailwindCSS</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+    <!--to avoid FOUC-->
+    <script> 
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.querySelector('html').classList.add('dark');
+      } else {
+        document.querySelector('html').classList.remove('dark');
+      }
+    </script>
 </head>
 <body class="bg-yellow-200">
-    <div class="py-9 px-6 bg-black dark:bg-white"> <!--content wrapper-->
+    <div class="py-9 px-6 bg-white dark:bg-black"> <!--content wrapper-->
         
-        <header class="flex flex-col md:flex-row md:justify-between md:items-start text-white dark:bg-white dark:text-black">
+        <header class="flex flex-col md:flex-row md:justify-between md:items-start text-black dark:bg-black dark:text-white">
           <div class="pr-4 font-bold">
             <h1 class="text-2xl">
               Social Media Dashboard
@@ -23,7 +32,7 @@
           <nav class="flex items-center justify-end border-t border-blue-bell sm:border-none border-opacity-40 ">
             <p class="pr-2 text-sm text-blue-bell font-bold">switch mode</p>
             <button id="switchTheme" class="h-8 w-8 my-2 text-yellow-500 sm:my-0 ">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="bg-black dark:bg-white">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="bg-white dark:bg-black">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
               </svg>
             </button>
@@ -105,7 +114,5 @@
     
 
     <script src="./js/scripts.js"></script>
-
-
 </body>
 </html>
