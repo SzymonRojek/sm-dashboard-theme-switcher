@@ -9,19 +9,19 @@
 
     <!--to avoid FOUC-->
     <script> 
-      // if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: white)').matches)) {
-      //   document.querySelector('html').classList.add('dark');
-      // } else {
-      //   document.querySelector('html').classList.remove('dark');
-      // }
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: white)').matches)) {
+        document.querySelector('html').classList.add('dark');
+      } else {
+        document.querySelector('html').classList.remove('dark');
+      }
     </script>
 </head>
 <body class="bg-yellow-200" >
-    <div class="container mx-auto max-w-7xl py-9 px-6 bg-black dark:bg-white "> <!--content wrapper-->
+    <div class="container mx-auto max-w-7xl py-9 px-6 bg-navyDark-primary dark:bg-white-zircon">
         
         <header class="flex flex-col sm:flex-row  justify-between sm:items-start">
           <div class="pr-4 font-bold">
-            <h1 class="text-2xl text-white dark:bg-white dark:text-black">
+            <h1 class="text-2xl text-white-lilac dark:text-navyDark-primary">
               Social Media Dashboard
             </h1>
             <p class="text-sm pt-1 pb-6 text-blue-bell">
@@ -31,8 +31,8 @@
         
           <nav class="flex items-center justify-end border-t border-blue-bell sm:border-none border-opacity-40 ">
             <p class="pr-2 text-sm font-bold text-blue-bell">switch mode</p>
-            <button id="switchTheme" class="h-8 w-8 my-2 text-yellow-500 sm:my-0 ">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="bg-black dark:bg-white">
+            <button id="switchTheme" class="h-8 w-8 my-2 text-navyDark-primary dark:text-white-lilac sm:my-0 ">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="rounded-md bg-white-lilac dark:bg-navyDark-primary">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
               </svg>
             </button>
@@ -40,33 +40,33 @@
         </header>
 
         <section class="flex flex-col">
-          <div class="w-full  h-40 bg-yellow-100 flex flex-col justify-center items-center" >
-              <a href="#"><img src="./img/facebook.svg" class="h-5 w-5 float-left" alt="">@nathanf</a>
-              <p>1981</p>
-              <p>Followers</p>
-              <p>12 Today</p>
+          <div class="w-full  h-40 flex flex-col justify-center items-center bg-navyDark-secondary dark:bg-white-lilac" >
+              <a href="#" class="text-blue-bell"><img src="./img/iconfinder-fb.png" class="h-5 w-5 float-left" alt="">@nathanf</a>
+              <p class="text-white-lilac dark:text-navyDark-primary">1981</p>
+              <p class="uppercase text-blue-bell">Followers</p>
+              <p class="text-gray-alto">12 Today</p>
           </div>
          
-          <div class="w-full h-40 bg-green-200 flex flex-col justify-center items-center">
-              <a href="#"><img src="./img/twitter.svg" class="h-5 w-5 float-left" alt="">@nathanf</a>
-              <p>1044</p>
-              <p>Followers</p>
-              <p>99 Today</p>
+          <div class="w-full h-40 flex flex-col justify-center items-center bg-navyDark-secondary dark:bg-white-lilac">
+              <a href="#" class="text-blue-bell"><img src="./img/iconfinder-twitter.png" class="h-5 w-5 float-left" alt="">@nathanf</a>
+              <p class="text-white-lilac dark:text-navyDark-primary">1044</p>
+              <p class="uppercase text-blue-bell">Followers</p>
+              <p class="text-green-mountainMeadow">99 Today</p>
           </div>
 
-          <div class="w-full h-40 bg-blue-100 flex flex-col justify-center items-center">
-              <a href="#"><img src="./img/instagram.svg" class="h-5 w-5 float-left" alt="">@realnathanf</a>
-              <p>11k</p>
-              <p>Followers</p>
-              <p>1099 Today</p>
+          <div class="w-full h-40 flex flex-col justify-center items-center bg-navyDark-secondary dark:bg-white-lilac">
+              <a href="#" class="text-blue-bell"><img src="./img/instagram.svg" class="h-5 w-5 float-left" alt="">@nathanf</a>
+              <p class="text-white-lilac dark:text-navyDark-primary">11k</p>
+              <p class="uppercase text-blue-bell">Followers</p>
+              <p class="text-green-mountainMeadow">1099 Today</p>
             </ul>
           </div>
 
-          <div class="w-full h-40 bg-red-300 flex flex-col justify-center items-center">
-              <a href="#"><img src="./img/youtube.svg" class="h-5 w-5 float-left" alt="">Nathan F.</a>
-              <p>8239</p>
-              <p>Subscribers</p>
-              <p>144 Today</p>
+          <div class="w-full h-40 flex flex-col justify-center items-center bg-navyDark-secondary dark:bg-white-lilac">
+              <a href="#" class="text-blue-bell"><img src="./img/youtube.svg" class="h-5 w-5 float-left" alt="">@nathanf</a>
+              <p class="text-white-lilac dark:text-navyDark-primary">8239</p>
+              <p class="uppercase text-blue-bell">Subscribers</p>
+              <p class="text-red-valencia">144 Today</p>
             </ul>
           </div>
         </section>
