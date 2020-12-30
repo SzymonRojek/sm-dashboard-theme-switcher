@@ -9,15 +9,15 @@
 
     <!--to avoid FOUC-->
     <script> 
-      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: white)').matches)) {
-        document.querySelector('html').classList.add('dark');
-      } else {
-        document.querySelector('html').classList.remove('dark');
-      }
+      // if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: white)').matches)) {
+      //   document.querySelector('html').classList.add('dark');
+      // } else {
+      //   document.querySelector('html').classList.remove('dark');
+      // }
     </script>
 </head>
-<body class="bg-yellow-200">
-    <div class="py-9 px-6 bg-black dark:bg-white"> <!--content wrapper-->
+<body class="bg-yellow-200" >
+    <div class="container mx-auto max-w-7xl py-9 px-6 bg-black dark:bg-white "> <!--content wrapper-->
         
         <header class="flex flex-col sm:flex-row  justify-between sm:items-start">
           <div class="pr-4 font-bold">
@@ -38,37 +38,43 @@
             </button>
           </nav>
         </header>
+
+        <section class="flex flex-col">
+          <div class="w-full  h-40 bg-yellow-100 flex flex-col justify-center items-center" >
+              <a href="#"><img src="./img/facebook.svg" class="h-5 w-5 float-left" alt="">@nathanf</a>
+              <p>1981</p>
+              <p>Followers</p>
+              <p>12 Today</p>
+          </div>
+         
+          <div class="w-full h-40 bg-green-200 flex flex-col justify-center items-center">
+              <a href="#"><img src="./img/twitter.svg" class="h-5 w-5 float-left" alt="">@nathanf</a>
+              <p>1044</p>
+              <p>Followers</p>
+              <p>99 Today</p>
+          </div>
+
+          <div class="w-full h-40 bg-blue-100 flex flex-col justify-center items-center">
+              <a href="#"><img src="./img/instagram.svg" class="h-5 w-5 float-left" alt="">@realnathanf</a>
+              <p>11k</p>
+              <p>Followers</p>
+              <p>1099 Today</p>
+            </ul>
+          </div>
+
+          <div class="w-full h-40 bg-red-300 flex flex-col justify-center items-center">
+              <a href="#"><img src="./img/youtube.svg" class="h-5 w-5 float-left" alt="">Nathan F.</a>
+              <p>8239</p>
+              <p>Subscribers</p>
+              <p>144 Today</p>
+            </ul>
+          </div>
+        </section>
       </div>
     
     
     
     <!-- 
-    
-    
-      Dark Mode
-    
-      
-    
-      @nathanf
-      1987
-      Followers
-      12 Today
-    
-      @nathanf
-      1044
-      Followers
-      99 Today
-    
-      @realnathanf
-      11k
-      Followers
-      1099 Today
-    
-      Nathan F.
-      8239
-      Subscribers
-      144 Today
-    
     
     
       Overview - Today
@@ -110,9 +116,6 @@
         Coded by <a href="#">Your Name Here</a>.
       </div> -->
     
-     
-    
-
     <script src="./js/scripts.js"></script>
 </body>
 </html>
