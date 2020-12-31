@@ -2,19 +2,18 @@
 
 
 const switcher = document.getElementById('switchTheme');
-const getPhraseMode = document.getElementById('phrase');
+const changeTextMode = document.getElementById('phrase');
 
-switcher.addEventListener('click', () => {
+switcher.addEventListener('click', function() {
   let htmlClasses = document.querySelector('html').classList;
 
-    if(localStorage.theme === 'dark') {
+    if(localStorage.theme == 'dark') {
       htmlClasses.remove('dark');
       localStorage.removeItem('theme');
-      getPhraseMode.innerHTML = 'dark mode';
+      changeTextMode.textContent = 'navy';
     } else {
       htmlClasses.add('dark'); 
       localStorage.theme = 'dark';
-      getPhraseMode.innerHTML = 'light mode';
+      changeTextMode.textContent = 'light';
     }
 });
-
