@@ -15,7 +15,7 @@ module.exports = {
           },
           blue: {
             bell: '#8C98C6',
-            odgerLight: '#1DA1F2',
+            dodgerLight: '#1DA1F2',
             dodgerDark: '#178FF5',
           },
           navyDark: {
@@ -29,7 +29,15 @@ module.exports = {
             monza: '#C4032B',
             valencia: '#DC414C',
           },
-      }
+      },
+      letterSpacing: {
+        large: '0.31rem',
+      },
+      fontFamily: {
+        inter: ['Inter'],
+      },
     }
   }
 }
+
+

@@ -5,7 +5,8 @@
   "main": "gulpfile.js",
   "dependencies": {
     "postcss": "^8.1.14",
-    "tailwindcss": "^2.0.2"
+    "tailwindcss": "^2.0.2",
+    "tailwindcss-border-gradients": "^2.0.3"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.4",
