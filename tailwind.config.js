@@ -40,6 +40,9 @@ module.exports = {
       fontFamily: {
         inter: ['Inter'],
       },
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
+       },
     }
   }
 }
