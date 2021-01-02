@@ -9,7 +9,7 @@ switcher.addEventListener('click', function() {
     if(localStorage.theme === 'dark') {
       htmlClasses.remove('dark');
       localStorage.removeItem('theme');
-      changeTextMode.textContent = 'navy';
+      changeTextMode.textContent = 'dark';
     } else {
       htmlClasses.add('dark'); 
       localStorage.theme = 'dark';
@@ -18,9 +18,11 @@ switcher.addEventListener('click', function() {
 });
 
 
+
+
 // changeTextMode.addEventListener('load', function() {
 //   if(localStorage.theme === 'dark') {
-//     changeTextMode.textContent = 'navy';
+//     changeTextMode.textContent = 'dark';
 //   } else {
 //     changeTextMode.textContent = 'light';
 //   }
