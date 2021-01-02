@@ -22,7 +22,6 @@ const disableDarkMode = () => {
 }
 
 // check the mode when the page is reload
-
 if (darkMode === 'enabled') {
   enableDarkMode();
 } else {
