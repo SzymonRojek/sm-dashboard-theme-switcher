@@ -9,31 +9,26 @@ const textMode = document.getElementById('phrase');
 const enableDarkMode = () => {
   htmlClasses.add('dark');
   localStorage.setItem('dark', 'enabled');
-
   textMode.textContent = 'dark';
 }
 
 const disableDarkMode = () => {
   htmlClasses.remove('dark');
   localStorage.setItem('dark', null);
-
   textMode.textContent = 'light';
 }
 
 // check the mode when the page is reload
 if (darkMode === 'enabled') {
   enableDarkMode();
-
   textMode.textContent = 'dark';
 }  else {
   disableDarkMode();
-
   textMode.textContent = 'light';
 }
 
 darkModeToggle.addEventListener('click', () => {
   darkMode = localStorage.getItem('dark');
-
     if (darkMode !== 'enabled') {
       enableDarkMode();
     } else {
