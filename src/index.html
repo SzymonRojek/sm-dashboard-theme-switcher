@@ -9,11 +9,13 @@
 
     <!--to avoid FOUC-->
     <script> 
-      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: white)').matches)) {
-        document.querySelector('html').classList.add('dark');
-      } else {
-        document.querySelector('html').classList.remove('dark');
-      }
+      // if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: white)').matches)) {
+      //   document.querySelector('html').classList.add('dark');
+      //   document.querySelector('#phrase').textContent = 'dark'
+      // } else {
+      //   document.querySelector('html').classList.remove('dark');
+      //   document.querySelector('#phrase').textContent = 'light'
+      // }
 
 
     </script>
