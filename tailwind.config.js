@@ -3,12 +3,16 @@ module.exports = {
   darkMode: 'class', // 'media' or true
   theme: {
     extend: {
+      screens: {
+        '2xl': '1440px',
+       },
       colors: {
           transparent: 'transparent',
           current: 'currentColor',
           white: {
             lilac: '#F1F3FA',
             zircon: '#F7F9FF',
+            clean: '#FFFFFF',
           },
           gray: {
             alto: '#D8D8D8'
