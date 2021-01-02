@@ -7,16 +7,6 @@
     <title>Gulp with TailwindCSS</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 
-    <!--to avoid FOUC-->
-    <!-- <script> 
-      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: white)').matches)) {
-        document.querySelector('html').classList.add('dark');
-        document.querySelector('#phrase').textContent = 'dark'
-      } else {
-        document.querySelector('html').classList.remove('dark');
-        document.querySelector('#phrase').textContent = 'light'
-      }
-    </script> -->
 </head>
 <body class="font-inter bg-white-clean dark:bg-navyDark-primary transition-colors ease-in-out duration-300">
  
@@ -42,8 +32,8 @@
               mode
             </p>
     
-            <button id="dark-mode-toggle" class="h-8 w-8 mt-6 text-white-lilac dark:text-navyDark-primary sm:my-0 ">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="rounded-md bg-navyDark-primary dark:bg-white-lilac ">
+            <button id="dark-mode-toggle" class="h-9 w-9 mt-6 text-yellow-600 dark:text-yellow-500 focus:outline-none animate-spin sm:my-0">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="rounded-md animate-pulse transparent">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
               </svg>
             </button>
@@ -51,7 +41,7 @@
         </header>
       </div>
     </div>
-    
+    <!-- hover:transform translate-y-6 -->
     <div class="relative bottom-20 max-w-screen-2xl">
 
       <!-- first section - 4 divs -->
@@ -59,7 +49,7 @@
 
         <!-- 1 pair -->
         <div class="w-full sm:flex flex-row w-1/2">
-          <div class="w-full my-6 flex flex-col justify-center items-center border-t-4 rounded-md border-blue-dodgerDark bg-white-lilac dark:bg-navyDark-secondary transition-colors ease-in-out duration-300 sm:mt-0 mr-6" >
+          <div class="w-full my-6 flex flex-col justify-center items-center border-t-4 rounded-md border-blue-dodgerDark bg-white-lilac dark:bg-navyDark-secondary transition-colors ease-in-out duration-300 sm:mt-0 mr-6">
             <a href="#" class="pt-9 pb-7 text-xs font-bold text-blue-bell leading-6">
               <img src="./img/iconfinder-fb.svg" class="h-6 w-6 mr-2 float-left" alt="">
               @nathanf
@@ -86,7 +76,7 @@
               <p class="pt-2 pb-6 text-xs uppercase tracking-large text-blue-bell">
                 Followers
               </p>
-              <p class="pb-6 text-xs font-bold text-green-mountainMeadow">
+              <p class="pb-6 text-xs font-bold text-green-mountainMeadow dark:text-gray-alto">
                 99 Today
               </p>
           </div>
@@ -105,7 +95,7 @@
             <p class="pt-2 pb-6 text-xs uppercase tracking-large text-blue-bell">
               Followers
             </p>
-            <p class="pb-6 text-xs font-bold text-green-mountainMeadow">
+            <p class="pb-6 text-xs font-bold text-green-mountainMeadow dark:text-gray-alto">
               1099 Today
             </p>
           </div>
@@ -121,7 +111,7 @@
               <p class="pt-2 pb-6 text-xs uppercase tracking-large text-blue-bell">
                 Subscribers
               </p>
-              <p class="pb-6 text-xs font-bold text-red-valencia">
+              <p class="pb-6 text-xs font-bold text-green-mountainMeadow dark:text-gray-alto">
                 144 Today
               </p>
           </div>
