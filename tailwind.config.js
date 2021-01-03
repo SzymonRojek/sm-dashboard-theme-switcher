@@ -43,6 +43,10 @@ module.exports = {
       animation: {
         'spin-slow': 'spin 3s linear infinite',
        },
+      outline: {
+        navyDark: '1px solid #20222F',
+        zircon: '2px dotted #F7F9FF',
+      }
     }
   }
 }

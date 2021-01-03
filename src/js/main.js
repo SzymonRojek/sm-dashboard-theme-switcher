@@ -62,3 +62,5 @@ darkModeToggle.addEventListener('click', () => {
 //       // textMode.textContent = 'dark';
 //     }
 // });
+
+require('remove-focus-outline')

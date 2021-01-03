@@ -5,6 +5,7 @@
   "main": "gulpfile.js",
   "dependencies": {
     "postcss": "^8.1.14",
+    "remove-focus-outline": "^1.2.1",
     "tailwindcss": "^2.0.2",
     "tailwindcss-border-gradients": "^2.0.3"
   },
