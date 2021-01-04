@@ -9,31 +9,36 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 
 </head>
-<body class="font-inter bg-white-clean dark:bg-navyDark-primary transition-colors ease-in-out duration-300">
- 
-  <div class="max-w-screen-2xl mx-auto"> <!--wrapp container-->
+<body class="font-inter bg-white-clean dark:bg-navyDark-primary transition-colors ease-in-out duration-300 relative">
 
-    <div class="container max-w-screen-2xl ">
-      <header class="py-9 px-6 bg-white-zircon dark:bg-navyDark-primary transition-colors ease-in-out duration-300">
+  <!-- additional div background color for vody and header with section 1 -->
+  <div class="h-64 w-full absolute inset-0 bg-white-zircon dark:bg-navyDark-primary transition-colors ease-in-out duration-300"></div>
+
+  <!--wrapp container-->
+  <div class="max-w-screen-2xl mx-auto lg:mx-20 relative"> 
+
+    <div class="container max-w-screen-2xl">
+
+      <header class="pt-9 px-6 bg-white-zircon dark:bg-navyDark-primary transition-colors ease-in-out duration-300">
         <div class="flex flex-col sm:flex-row  justify-between sm:items-start">
           <div class="pr-4 font-bold">
-            <h1 class="text-2xl text-navyDark-primary dark:text-white-lilac ">
+            <h1 class="text-2xl text-navyDark-primary dark:text-white-lilac">
               Social Media Dashboard
             </h1>
-            <p class="text-sm pt-1 pb-6 text-blue-bell">
+            <p class="text-sm pt-1 pb-2 text-blue-bell">
               Total Followers: 23,004
             </p>
           </div>
         
-          <nav class="flex items-center justify-end border-t border-blue-bell sm:border-none border-opacity-40 mb-14">
+          <nav class="flex items-center justify-end border-t border-blue-bell sm:border-none border-opacity-40">
             <p class="pr-2 text-sm font-bold text-blue-bell mt-5 sm:mt-0">
               <span id="phrase">
-                
+                             <!-- here will appear dark or light phrase -->
               </span>
               mode
             </p>
     
-            <button id="dark-mode-toggle" class="h-9 w-9 mt-6 text-yellow-600 rounded-full dark:text-yellow-500 bg-white-zircon dark:bg-navyDark-primary animate-pulse transition-colors ease-in-out duration-300 focus:outline-zircon sm:my-0">
+            <button id="dark-mode-toggle" class="h-9 w-9 mt-6 text-yellow-600 rounded-full dark:text-yellow-500 bg-white-zircon dark:bg-navyDark-primary animate-pulse transition-colors ease-in-out duration-300 focus:outline-zircon sm:my-0" aria label "toggle dark mode">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="rounded-full animate-spin-slow bg-white-zircon dark:bg-navyDark-primary transition-colors ease-in-out duration-300 ">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
               </svg>
@@ -43,7 +48,8 @@
       </header>
     </div>
  
-    <main class="relative bottom-20 max-w-screen-2xl">
+    <!-- relative -->
+    <main class="max-w-screen-2xl">
 
       <!-- first section - 4 divs -->
       <section class="ml-6 mr-6  flex flex-col sm:mt-10 lg:flex-row">
@@ -304,7 +310,7 @@
       </section>
     </main>  
 
-    <footer class="flex flex-col text-sm text-blue-bell pb-6">
+    <footer class="flex flex-col text-sm text-blue-bell py-6">
       <p class="flex justify-center pb-2">Challenge 
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener noreferrer">
         @Frontend Mentor
@@ -325,4 +331,9 @@
 </body>
 </html>
 
-<!-- aria label "toggle dark mode", maybe role? -->
+<!-- 
+  to do:
+- alt for icons;
+- check accessibility for buttons and icons and links;
+
+-->
