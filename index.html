@@ -11,10 +11,8 @@
 </head>
 <body class="font-inter bg-white-clean dark:bg-navyDark-primary transition-colors ease-in-out duration-300 relative">
 
-  <!-- additional div background color for vody and header with section 1 -->
   <div class="h-64 w-full absolute inset-0 bg-white-zircon dark:bg-navyDark-primary transition-colors ease-in-out duration-300"></div>
 
-  <!--wrapp container-->
   <div class="max-w-screen-2xl mx-auto md:mx-10 lg:mx-20 relative"> 
 
     <div class="container max-w-screen-2xl">
@@ -30,31 +28,18 @@
             </p>
           </div>
         
-          <nav class="flex items-center justify-end border-t border-blue-bell sm:border-none border-opacity-40 md:mt-2 mr-6">
-            <p class="mt-5 pr-2 font-yeonSung  text-blue-bell dark:text-red-monza sm:mt-0 md:mr-1 lg:text-lg">
-              <span id="phrase">
-                             <!-- here will appear dark or light phrase -->
-              </span>
-              mode
-            </p>
-    
-            <button role="switch" aria-label="toggle dark mode" id="dark-mode-toggle" class="h-9 w-9 mt-6 text-yellow-600 rounded-full dark:text-yellow-500 bg-white-zircon dark:bg-navyDark-primary animate-pulse transition-colors ease-in-out duration-300 focus:outline-zircon sm:my-0">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="rounded-full animate-spin-slow bg-white-zircon dark:bg-navyDark-primary transition-colors ease-in-out duration-300">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-              </svg>
+          <div class="flex items-center justify-end border-t border-blue-bell sm:border-none border-opacity-40 md:mt-2 mr-6">
+            <button id="dark-mode-toggle" role="switch" aria-pressed="true" class="mt-5 px-2 py-1 font-yeonSung  text-blue-bell dark:text-red-monza dark:bg-navyDark-secondary border-2 border-light-blue-500 dark:border-blue-bell rounded-lg hover:shadow-md hover:bg-gray-100 transition duration-300 ease-in-out focus:outline-none focus:ring focus:border-blue-300 sm:mt-0 md:mr-1 lg:text-lg">
+              <span id="phrase">light</span> mode
             </button>
-          </nav>
+          </div>
         </div>
       </header>
     </div>
  
-    <!-- relative -->
     <main class="max-w-screen-2xl">
 
-      <!-- first section - 4 divs -->
       <section class="ml-6 mr-6  flex flex-col sm:mt-10 lg:flex-row">
-
-        <!-- 1 pair -->
         <div class="w-full sm:flex flex-row w-1/2">
           <div class="w-full my-6 flex flex-col justify-center items-center border-t-4 rounded-md border-blue-dodgerDark bg-white-lilac dark:bg-navyDark-secondary transition-colors ease-in-out duration-300 shadow-lg sm:mt-0 mr-6">
             <a href="#" class="pt-9 pb-7 text-xs font-bold text-blue-bell leading-6">
@@ -95,7 +80,6 @@
           </div>
         </div>
 
-        <!-- 2 pair -->
         <div class="w-full sm:flex flex-row w-1/2">
           <div class="w-full mb-6 flex flex-col justify-center items-center border-t-4 rounded-md border-red-valencia bg-white-lilac dark:bg-navyDark-secondary transition-colors ease-in-out duration-300 shadow-lg sm:mr-6">
             <a href="#" class="pt-9 pb-7 text-xs font-bold text-blue-bell leading-6">
@@ -138,17 +122,14 @@
         </div>
       </section>
 
-      <!-- 2 section - 8 divs -->
       <section class="mx-6 bg-white-clean dark:bg-navyDark-primary transition-colors ease-in-out duration-300">
           <div>
             <h2 class="pt-6 pb-7 text-lg font-bold text-navyDark-primary dark:text-white-lilac md:text-xl lg:text-2xl">
               Overview - Today
             </h2>
 
-            <!-- large screen 4 divs in row -->
             <div class="lg:flex flex-row">
 
-              <!-- 1 pair -->
               <div class="w-full sm:flex flex-row w-1/2">
                 <div class="w-full mr-6 px-6 py-6 mb-4 rounded-md bg-white-lilac dark:bg-navyDark-secondary transition-colors ease-in-out duration-300 shadow-md md:mb-6 mr-6">
                   <div class="pb-6 w-full flex flex-row justify-between">
@@ -197,8 +178,8 @@
                 </div>
               </div>
 
-              <!-- 2 pair -->
               <div class="w-full sm:flex flex-row w-1/2">
+
                 <div class="w-full mr-6 px-6 py-6 mb-4 rounded-md bg-white-lilac dark:bg-navyDark-secondary transition-colors ease-in-out duration-300 shadow-md md:mb-6 mr-6">
                   <div class="pb-6 w-full flex flex-row justify-between">
                     <p class="tex-sm font-bold text-blue-bell">
@@ -245,9 +226,8 @@
               </div>
             </div>
             
-            <!-- large screen 4 divs in row -->
             <div class="lg:flex flex-row">
-              <!-- 3 pair -->
+
               <div class="w-full sm:flex flex-row w-1/2">
                 <div class="w-full mr-6 px-6 py-6 mb-4 rounded-md bg-white-lilac dark:bg-navyDark-secondary transition-colors ease-in-out duration-300 shadow-md md:mb-6 mr-6">
                   <div class="pb-6 w-full flex flex-row justify-between">
@@ -294,8 +274,8 @@
                 </div>
               </div>
 
-              <!-- 4 pair -->
               <div class="w-full sm:flex flex-row w-1/2">
+
                 <div class="w-full mr-6 px-6 py-6 mb-4 rounded-md bg-white-lilac dark:bg-navyDark-secondary transition-colors ease-in-out duration-300 shadow-md md:mb-6 mr-6">
                   <div class="pb-6 w-full flex flex-row justify-between">
                     <p class="tex-sm font-bold text-blue-bell">
@@ -360,16 +340,8 @@
       </p>
     </footer>
     
-  </div> <!--wrapp container-->
+  </div>
 
-    
   <script src="./js/scripts.js"></script>
 </body>
 </html>
-
-<!-- 
-  to do:
-- alt for icons;
-- check accessibility for buttons and icons and links;
-
--->
