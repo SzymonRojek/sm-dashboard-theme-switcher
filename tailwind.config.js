@@ -39,6 +39,7 @@ module.exports = {
       },
       fontFamily: {
         inter: ['Inter'],
+        yeonSung: ['"Yeon Sung"'],
       },
       animation: {
         'spin-slow': 'spin 3s linear infinite',
