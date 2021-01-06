@@ -10,14 +10,15 @@ const enableDarkMode = () => {
 
   // element o kluczu bcolor przechować ma wartość enabledDark
   localStorage.setItem('bcolor', 'enabledDark'); 
-  textMode.textContent = 'dark';
+  textMode.textContent = 'light';
 }
 
 const disableDarkMode = () => {
   htmlClasses.remove('dark');
   
   localStorage.setItem('bcolor', null); 
-  textMode.textContent = 'light';
+  textMode.textContent = 'dark';
+  localStorage.clear();
 }
 
 
