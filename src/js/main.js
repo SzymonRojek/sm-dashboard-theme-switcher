@@ -22,24 +22,22 @@ const disableDarkMode = () => {
 }
 
 
-switcherMode.addEventListener('click', (e) => {  
-
-  let darkPressed = e.target.getAttribute('aria-pressed') === 'true';
-  // e.target.setAttribute('aria-pressed', String(!darkPressed));
-
-  darkMode = localStorage.getItem('bcolor');
-  if (darkMode !== 'enabledDark') {
-    e.target.setAttribute('aria-pressed', String(darkPressed));
-    enableDarkMode();
-  } else {
-    e.target.setAttribute('aria-pressed', String(!darkPressed));
-    disableDarkMode();
-  }
-});
-
-// check the mode when the page is reload
-if (darkMode === 'enabledDark') {
-  enableDarkMode();
-}  else {
-  disableDarkMode();
+function handleBtnClick(event) {
+  toggleButton(event.target);
 }
+
+function toggleButton(element) {
+  let pressed = (element.getAttribute("aria-pressed") === "true");
+  element.setAttribute("aria-pressed", !pressed);
+
+  darkMode - localStorage.getItem('bcolor');
+  if(!pressed && darkMode !== 'enableDark') {
+     enableDarkMode();
+  } else {
+     disableDarkMode();
+  }
+}
+
+switcherMode.addEventListener('click', (event) => {
+  handleBtnClick(event);
+})
