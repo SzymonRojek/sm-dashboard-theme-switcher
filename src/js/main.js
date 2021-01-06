@@ -5,7 +5,6 @@ const switcherMode = document.getElementById('switcher-mode');
 const htmlClasses = document.querySelector('html').classList;
 const textMode = document.querySelector('.phrase');
 
-
 const enableDarkMode = () => {
   htmlClasses.add('dark');
 
@@ -31,8 +30,9 @@ function toggleButton(element) {
   element.setAttribute("aria-pressed", !pressed);
 
   darkMode - localStorage.getItem('bcolor');
-  
+
     if(!pressed && darkMode !== 'enableDark') {
+      pressed = (element.getAttribute("aria-pressed") === "true")
       enableDarkMode();
     } else {
       disableDarkMode();
@@ -44,8 +44,14 @@ switcherMode.addEventListener('click', (event) => {
 })
 
 // // check the mode when the page is reload
-if (darkMode === 'enabledDark') {
-  enableDarkMode();
-}  else {
-  disableDarkMode();
+
+function afterLoadPage() {
+  if (darkMode === 'enabledDark') {
+    switcherMode.setAttribute("aria-pressed", true);
+    enableDarkMode();
+  }  else {
+    switcherMode.setAttribute("aria-pressed", false);
+    disableDarkMode();
+  }
 }
+afterLoadPage();
