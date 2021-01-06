@@ -1,10 +1,10 @@
 
 
 let darkMode = localStorage.getItem('bcolor');
-
-const darkModeToggle = document.getElementById('dark-mode-toggle');
+const switcherMode = document.getElementById('switcher-mode');
 const htmlClasses = document.querySelector('html').classList;
 const textMode = document.getElementById('phrase');
+
 
 const enableDarkMode = () => {
   htmlClasses.add('dark');
@@ -21,25 +21,25 @@ const disableDarkMode = () => {
   textMode.textContent = 'light';
 }
 
+
+switcherMode.addEventListener('click', (e) => {  
+
+  let darkPressed = e.target.getAttribute('aria-pressed') === 'true';
+  // e.target.setAttribute('aria-pressed', String(!darkPressed));
+
+  darkMode = localStorage.getItem('bcolor');
+  if (darkMode !== 'enabledDark') {
+    e.target.setAttribute('aria-pressed', String(darkPressed));
+    enableDarkMode();
+  } else {
+    e.target.setAttribute('aria-pressed', String(!darkPressed));
+    disableDarkMode();
+  }
+});
+
 // check the mode when the page is reload
 if (darkMode === 'enabledDark') {
   enableDarkMode();
-
-  textMode.textContent = 'dark';
 }  else {
   disableDarkMode();
-
-  textMode.textContent = 'light';
 }
-
-darkModeToggle.addEventListener('click', () => {
- console.log('test');
-  darkMode = localStorage.getItem('bcolor');
-    if (darkMode !== 'enabledDark') {
-      enableDarkMode();
-    } else {
-      disableDarkMode();
-    }
-})
-
-
