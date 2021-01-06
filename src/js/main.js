@@ -32,6 +32,7 @@ function toggleButton(element) {
   darkMode - localStorage.getItem('bcolor');
 
     if(!pressed && darkMode !== 'enableDark') {
+      pressed = (element.getAttribute("aria-pressed") === "true")
       enableDarkMode();
     } else {
       disableDarkMode();
