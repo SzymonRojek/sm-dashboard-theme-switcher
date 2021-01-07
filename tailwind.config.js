@@ -15,6 +15,7 @@ module.exports = {
             clean: '#FFFFFF',
           },
           gray: {
+            nobel: '#b0a7a7',
             alto: '#D8D8D8',
             athens: '#e1e2ea',
           },
@@ -27,6 +28,7 @@ module.exports = {
             primary: '#20222F',
             secondary: '#252B42',
             tertiary: '#374062',
+            fifth: '#5a627f',
           },
           green: {
             mountainMeadow: '#1EB589',
