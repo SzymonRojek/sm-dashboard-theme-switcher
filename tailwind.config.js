@@ -15,7 +15,8 @@ module.exports = {
             clean: '#FFFFFF',
           },
           gray: {
-            alto: '#D8D8D8'
+            alto: '#D8D8D8',
+            athens: '#e1e2ea',
           },
           blue: {
             bell: '#8C98C6',
@@ -25,6 +26,7 @@ module.exports = {
           navyDark: {
             primary: '#20222F',
             secondary: '#252B42',
+            tertiary: '#374062',
           },
           green: {
             mountainMeadow: '#1EB589',

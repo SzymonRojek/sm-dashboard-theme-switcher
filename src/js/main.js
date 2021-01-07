@@ -26,6 +26,8 @@ const handleBtnClick = event => {
 }
 
 const toggleButton = element => {
+  darkMode = localStorage.getItem('theme');
+
   let pressed = (element.getAttribute("aria-pressed") === "true");
   element.setAttribute("aria-pressed", !pressed);
   
@@ -37,7 +39,7 @@ const toggleButton = element => {
 }
 
 switcherMode.addEventListener('click', ( event ) => {
-  handleBtnClick(event);
+  handleBtnClick( event );
 }, false)
 
 const afterLoadPage = () => {
