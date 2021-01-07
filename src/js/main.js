@@ -18,7 +18,6 @@ const disableDarkMode = () => {
   
   localStorage.setItem('bcolor', null); 
   textMode.textContent = 'dark';
-  localStorage.clear();
 }
 
 
@@ -30,10 +29,7 @@ function toggleButton(element) {
   let pressed = (element.getAttribute("aria-pressed") === "true");
   element.setAttribute("aria-pressed", !pressed);
 
-  darkMode - localStorage.getItem('bcolor');
-
     if(!pressed && darkMode !== 'enableDark') {
-      pressed = (element.getAttribute("aria-pressed") === "true")
       enableDarkMode();
     } else {
       disableDarkMode();
@@ -44,7 +40,8 @@ switcherMode.addEventListener('click', (event) => {
   handleBtnClick(event);
 })
 
-// // check the mode when the page is reload
+
+// check the mode when the page is reload
 
 function afterLoadPage() {
   if (darkMode === 'enabledDark') {
