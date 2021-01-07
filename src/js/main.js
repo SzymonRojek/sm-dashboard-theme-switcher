@@ -21,11 +21,11 @@ const disableDarkMode = () => {
 }
 
 
-function handleBtnClick(event) {
+const handleBtnClick = event => {
   toggleButton(event.target);
 }
 
-function toggleButton(element) {
+const toggleButton = element => {
   let pressed = (element.getAttribute("aria-pressed") === "true");
   element.setAttribute("aria-pressed", !pressed);
   
@@ -36,14 +36,11 @@ function toggleButton(element) {
     }
 }
 
-switcherMode.addEventListener('click', (event) => {
+switcherMode.addEventListener('click', ( event ) => {
   handleBtnClick(event);
 }, false)
 
-
-// check the mode when the page is reload
-
-function afterLoadPage() {
+const afterLoadPage = () => {
   if (darkMode === 'dark-light') {
     switcherMode.setAttribute("aria-pressed", true);
     enableDarkMode()
