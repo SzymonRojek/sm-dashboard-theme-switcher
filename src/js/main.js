@@ -1,6 +1,6 @@
 
 
-let darkMode = localStorage.getItem('bcolor');
+let darkMode = localStorage.getItem('darkMode');
 const switcherMode = document.getElementById('switcher-mode');
 const htmlClasses = document.querySelector('html').classList;
 const textMode = document.querySelector('.phrase');
@@ -9,14 +9,14 @@ const enableDarkMode = () => {
   htmlClasses.add('dark');
 
   // element o kluczu bcolor przechować ma wartość enabledDark
-  localStorage.setItem('bcolor', 'enabledDark'); 
+  localStorage.setItem('darkMode', 'enabledDark'); 
   textMode.textContent = 'light';
 }
 
 const disableDarkMode = () => {
   htmlClasses.remove('dark');
   
-  localStorage.setItem('bcolor', null); 
+  localStorage.setItem('darkMode', null); 
   textMode.textContent = 'dark';
 }
 
