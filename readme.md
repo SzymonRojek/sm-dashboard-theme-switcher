@@ -1,12 +1,31 @@
-## Social Media Dasboard & theme switcher
+# Social Media Dasboard & theme switcher
 
-# Preview site [here](https://szymonrojek.github.io/sm-dashboard-theme-switcher/)
+## 🎥  Preview site [here](https://szymonrojek.github.io/sm-dashboard-theme-switcher/)
 
-# Gulp with TailwindCSS Starter Kit
+**Technologies used:**
+* [x] Gulp
+* [x] Tailwindcss
+* [x] HTML, CSS, JS
 
-Gulp with TailwindCSS Starter Kit made by Adam Wathan, [here](https://github.com/tailwindcss/tailwindcss) -  with some minor changes to the path of files and destination.
+## **For this project I've used:
+- Semantic tags and attributes;
+- Invisible content just for Screen Reader users;
+- Flexbox;
+- RWD, mobile first;
 
-## Usage
+**Main goals:**
+- detect if the user has requested the system use a light or dark color theme (prefers-color-scheme);
+- switch manually the mode light/dark (smooth transition);
+- do not change the mode when the page has been reload;
+
+**Conclusion:**
+This is my first project with the tailwindcss framework. I have enjoyed and definitely I would like to expand my knowledge in this area.
+
+Instead of the toggle I have used the button because I wanted to applied a different design pattern and button changes the state (aria-pressed) so the mode can be reverted too. After this project I know that as a toggle it is better to use the radio button because of express explicit state or even checkbox, but button could be used as a last resort. 
+
+The challenge comes from the website [Frontendmentor.io](https://www.frontendmentor.io/dashboard).
+
+## Usage:
 
 1. Install Dev Depedencies
 ```
