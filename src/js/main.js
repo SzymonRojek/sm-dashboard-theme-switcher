@@ -15,8 +15,6 @@ function checkDarkMode() {
   return false;
 }
 
-
-
 const enableDarkMode = () => {
   htmlClasses.add('dark');
 
@@ -73,13 +71,21 @@ Jezeli przegladrka wybierze glowne theme to aria pressed dla niego bedzie poczat
 Dlatego jezeli bedzie dark mode to aria-pressed = false, nacisniecie buttona przypisze true do arii, 
 tj. wlaczenie buttona. Teraz istotne jest to, by po odswiezeniu strony aria sie nie zmienila.
 
-ponizej mam dwie nieudane proby napisania funkcji w kontekscie odswiezania strony: 
-obie sa do kitu, ale cos z nich moze sie przyda...
-
 */
 
 
-// const afterLoadPage = () => {
+// const afterReloadPage = () => {
+ 
+//     if (darkMode === 'dark-light') {
+//       enableDarkMode()
+//     } else {
+//       disableDarkMode();
+//     }
+//   }
+//   afterReloadPage();
+  
+
+  // const afterReloadPage = () => {
 //   if (darkMode === 'dark-light') {
 //     switcherMode.setAttribute("aria-pressed", true);
 //     enableDarkMode()
@@ -88,16 +94,11 @@ obie sa do kitu, ale cos z nich moze sie przyda...
 //     disableDarkMode();
 //   }
 // }
-// afterLoadPage();
+// afterReloadPage();
 
 
-// const afterLoadPage = () => {
-// if (localStorage.theme === 'dark-light' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-//   enableDarkMode()
+// if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+//   document.querySelector('html').classList.add('dark')
 // } else {
-//   disableDarkMode();
+//   document.querySelector('html').classList.remove('dark')
 // }
-
-// }
-// afterLoadPage();
-
