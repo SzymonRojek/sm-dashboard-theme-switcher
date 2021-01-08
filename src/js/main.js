@@ -1,35 +1,33 @@
 
-let darkMode = localStorage.getItem('theme');
-const switcherMode = document.getElementById('switcher-mode');
-const htmlClasses = document.querySelector('html').classList;
-const textMode = document.querySelector('.phrase');
+let darkMode = localStorage.getItem( 'theme' );
+const switcherMode = document.getElementById( 'switcher-mode' );
+const htmlClasses = document.querySelector( 'html' ).classList;
+const textMode = document.querySelector( '.phrase' );
 
 function checkDarkMode() {
-  if (
-    window.matchMedia &&
-    window.matchMedia('(prefers-color-scheme: dark)').matches
-    
-  ) {
+  if ( window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ) {
     return true;
   }
   return false;
 }
 
 const enableDarkMode = () => {
-  htmlClasses.add('dark');
+  
 
   // element o kluczu bcolor przechować ma wartość enabledDark
-  localStorage.setItem('theme', 'dark-light'); 
+  localStorage.setItem( 'theme', 'dark-light' ); 
+  htmlClasses.add( 'dark' );
   textMode.textContent = 'light';
 }
 
 const disableDarkMode = () => {
-  htmlClasses.remove('dark');
-  localStorage.setItem('theme', null); 
-  textMode.textContent = 'dark ';
+
+  localStorage.setItem( 'theme', null ); 
+  htmlClasses.remove( 'dark' );
+  textMode.textContent = 'dark';
 }
 
-if (checkDarkMode()) {
+if ( checkDarkMode() ) {
   enableDarkMode();
 } else {
   disableDarkMode();
@@ -37,23 +35,23 @@ if (checkDarkMode()) {
 
 
 const handleBtnClick = event => {
-  toggleButton(event.target);
+  toggleButton( event.target );
 }
 
 const toggleButton = element => {
-  darkMode = localStorage.getItem('theme');
+  darkMode = localStorage.getItem( 'theme' );
 
-  let pressed = (element.getAttribute("aria-pressed") === "true");
-  element.setAttribute("aria-pressed", !pressed);
+  let pressed = element.getAttribute( 'aria-pressed' ) === 'true';
+  element.setAttribute( 'aria-pressed', !pressed );
   
-    if(!pressed && darkMode !== 'dark-light') {
+    if( !pressed && darkMode !== 'dark-light' ) {
       enableDarkMode();
     } else {
       disableDarkMode();
     }
 }
 
-switcherMode.addEventListener('click', ( event ) => {
+switcherMode.addEventListener( 'click', ( event ) => {
   handleBtnClick( event );
 }, false)
 
@@ -74,27 +72,14 @@ tj. wlaczenie buttona. Teraz istotne jest to, by po odswiezeniu strony aria sie 
 */
 
 
-// const afterReloadPage = () => {
- 
-//     if (darkMode === 'dark-light') {
-//       enableDarkMode()
-//     } else {
-//       disableDarkMode();
-//     }
-//   }
-//   afterReloadPage();
-  
-
-  // const afterReloadPage = () => {
-//   if (darkMode === 'dark-light') {
-//     switcherMode.setAttribute("aria-pressed", true);
-//     enableDarkMode()
-//   }  else {
-//     switcherMode.setAttribute("aria-pressed", false);
-//     disableDarkMode();
-//   }
-// }
-// afterReloadPage();
+ const afterReloadPage = () => {
+      if (darkMode === 'dark-light') {
+        enableDarkMode()
+      } else {
+        disableDarkMode();
+      }
+    }
+afterReloadPage();
 
 
 // if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
