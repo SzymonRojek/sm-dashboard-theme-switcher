@@ -28,7 +28,7 @@ const enableDarkMode = () => {
 const disableDarkMode = () => {
   htmlClasses.remove('dark');
   localStorage.setItem('theme', null); 
-  textMode.textContent = 'dark';
+  textMode.textContent = 'dark ';
 }
 
 if (checkDarkMode()) {
@@ -61,13 +61,22 @@ switcherMode.addEventListener('click', ( event ) => {
 
 
 
+/*
+celem główbym jest to, by skrypt rozpoznał preferencje uzytkownia do theme - 
+jezeli uzytkownik nie ma nic przeciwko by uzywac dark mode, to ma być ono uznane za docelowe. 
+Jednakze ciekawi mnie taka sytuacja: jezeli user w danym momencie wybierze light mode, 
+to kolejnym celem jest to, by po odswiezeniu strony owo light mode zostawało,
+na pewno mozna taki skrypt napisac. 
 
-// celem główbym jest to, by skrypt rozpoznał preferencje uzytkownia do theme - jezeli uzytkownik nie ma nic przeciwko by uzywac dark mode, to ma być ono uznane za docelowe. Jednakze ciekawi mnie taka sytuacja: jezeli user w danym momencie wybierze light mode, to kolejnym celem jest to, by po odswiezeniu strony owo light mode zostawało :) na pewno mozna taki skrypt napisac. 
+aria pressed ma odczytywac status buttona. 
+Jezeli przegladrka wybierze glowne theme to aria pressed dla niego bedzie poczatkowo false. 
+Dlatego jezeli bedzie dark mode to aria-pressed = false, nacisniecie buttona przypisze true do arii, 
+tj. wlaczenie buttona. Teraz istotne jest to, by po odswiezeniu strony aria sie nie zmienila.
 
-// aria pressed ma odczytywac status buttona. Jezeli przegladrka wybierze glowne theme to aria pressed dla niego bedzie poczatkowo false. Dlatego jezeli bedzie dark mode to aria-pressed = false, nacisniecie buttona przypisze true do arii, tj. wlaczenie buttona. Teraz istotne jest to, by po odswiezeniu strony aria sie nie zmienila.
+ponizej mam dwie nieudane proby napisania funkcji w kontekscie odswiezania strony: 
+obie sa do kitu, ale cos z nich moze sie przyda...
 
-// ponizej mam dwie nieudane proby napisania funkcji w kontekscie odswiezania strony: obie sa do kitu, ale cos z nich moze sie przyda...
-
+*/
 
 
 // const afterLoadPage = () => {
