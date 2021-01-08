@@ -58,17 +58,18 @@ switcherMode.addEventListener( 'click', ( event ) => {
 
 
 /*
-celem główbym jest to, by skrypt rozpoznał preferencje uzytkownia do theme - 
-jezeli uzytkownik nie ma nic przeciwko by uzywac dark mode, to ma być ono uznane za docelowe. 
+celem głównym jest to, by skrypt rozpoznał preferencje usera do rodzaju theme - 
+jezeli user nie ma nic przeciwko by uzywac dark mode, to ma być ono uznane za docelowe. 
 Jednakze ciekawi mnie taka sytuacja: jezeli user w danym momencie wybierze light mode, 
-to kolejnym celem jest to, by po odswiezeniu strony owo light mode zostawało,
-na pewno mozna taki skrypt napisac. 
+to kolejnym celem jest to, by po odswiezeniu strony owo light mode zostawało.
 
 aria pressed ma odczytywac status buttona. 
-Jezeli przegladrka wybierze glowne theme to aria pressed dla niego bedzie poczatkowo false. 
-Dlatego jezeli bedzie dark mode to aria-pressed = false, nacisniecie buttona przypisze true do arii, 
-tj. wlaczenie buttona. Teraz istotne jest to, by po odswiezeniu strony aria sie nie zmienila.
+Jezeli przegladrka wybierze theme dark lub light w zaleznosci od preferencji
+usera to aria pressed dla niego bedzie poczatkowo false. 
+Dlatego jezeli bedzie dark mode to aria-pressed = false, natomiast nacisniecie buttona przypisze true do arii, co oznacza wlaczenie buttona. T
+eraz istotne jest to, by po odswiezeniu strony aria sie nie zmienila.
 
+Problem double click pozostaje.
 */
 
 
