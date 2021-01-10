@@ -36,6 +36,7 @@ module.exports = {
           red: {
             monza: '#C4032B',
             valencia: '#DC414C',
+            apricot: '#EF8C85',
           },
       },
       letterSpacing: {
