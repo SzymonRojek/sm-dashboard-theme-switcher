@@ -22,14 +22,15 @@
   }
 
   function setPreferentialTheme() {
-    if ( window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ) {
-      switchOn();
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.querySelector('html').classList.add('dark')
     } else {
-      switchOff();
+      document.querySelector('html').classList.remove('dark');
     }
   }
+  setPreferentialTheme();
 
-  const toggleButton = element => {
+  const toggleButton = () => {
       if( localStorage.getItem( 'theme' ) === 'dark') {
         switchOff();
       } else {
@@ -53,4 +54,19 @@
 
 
 
+// On page load or when changing themes, best to add inline in `head` to avoid FOUC
 
+// if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+//   document.querySelector('html').classList.add('dark')
+// } else {
+//   document.querySelector('html').classList.remove('dark')
+// }
+
+// Whenever the user explicitly chooses light mode
+// localStorage.theme = 'light'
+
+// Whenever the user explicitly chooses dark mode
+// localStorage.theme = 'dark'
+
+// Whenever the user explicitly chooses to respect the OS preference
+// localStorage.removeItem('theme')
