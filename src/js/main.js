@@ -1,6 +1,11 @@
+
+(() => {
+  'use strict'
+
 const switcherMode = document.getElementById( 'switcher-mode' );
 const htmlClasses = document.querySelector( 'html' ).classList;
 const textMode = document.querySelector( '.phrase' );
+
 
 function switchOn() {
   htmlClasses.add( 'dark' );
@@ -39,8 +44,13 @@ switcherMode.addEventListener( 'click', ( event ) => {
 
 // reload the page
   if (localStorage.getItem( 'theme' ) === 'dark') {
-    switchOn()
+    switchOn();
   } else {
-   switchOff()
+   switchOff();
   }
+
+})()
+
+
+
 
