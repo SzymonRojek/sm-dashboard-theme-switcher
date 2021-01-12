@@ -13,8 +13,6 @@
 </head>
 <body class="relative font-inter bg-white-clean dark:bg-navyDark-primary transition-colors ease-in-out duration-500">
 
-  <span class="sr-only">Social Media Dashboard Theme Switcher</span>
-
   <div class="absolute inset-0 w-full h-64 bg-white-zircon dark:bg-navyDark-primary transition-colors ease-in-out duration-500"></div>
 
   <div class="relative max-w-screen-2xl mx-auto md:mx-10 lg:mx-20"> 
@@ -33,7 +31,7 @@
           </div>
         
           <div class="flex items-center justify-end border-t border-blue-bell border-opacity-40 sm:border-none">
-            <button id="switcher-mode" aria-label="theme mode" role="switch" aria-pressed="false" class="mt-8 w-14 px-2 py-2 text-xs tracking-widest font-yeonSung font-bold transition duration-500 ease-in-outtext-white-clean dark:text-navyDark-primary bg-navyDark-secondary dark:bg-red-apricot border-2 border-light-blue-500 dark:border-blue-bell shadow-2xl rounded-xl focus:outline-none focus:border-blue-300 cursor-pointer sm:mt-4 sm:w-16 sm:px-3 sm:py-2 md:hover:text-navyDark-primary md:hover:bg-red-apricot md:dark:hover:bg-gray-athens md:pr-2 md:text-sm">
+            <button id="switcher-mode" aria-label="dark mode" role="switch" aria-checked="false" class="mt-8 w-14 px-2 py-2 text-xs tracking-widest font-yeonSung font-bold transition duration-500 ease-in-outtext-white-clean dark:text-navyDark-primary bg-navyDark-secondary dark:bg-red-apricot border-2 border-light-blue-500 dark:border-blue-bell shadow-2xl rounded-xl focus:outline-none focus:border-blue-300 cursor-pointer sm:mt-4 sm:w-16 sm:px-3 sm:py-2 md:hover:text-navyDark-primary md:hover:bg-red-apricot md:dark:hover:bg-gray-athens md:pr-2 md:text-sm">
               <span class="phrase"></span> mode
             </button>
           </div>
@@ -44,11 +42,12 @@
     <main class="max-w-screen-2xl">
 
       <section class="flex flex-col ml-6 mr-6 sm:mt-10 lg:flex-row">
+        <h2 class="sr-only">Main Social Services</h2>
+
         <div class="w-full sm:flex">
           <article class="flex flex-col justify-center items-center w-full my-6 mr-6 border-t-4 rounded-md border-blue-dodgerDark bg-white-lilac transition ease-in-out duration-500  dark:bg-navyDark-secondary hover:bg-gray-athens dark:hover:bg-navyDark-tertiary shadow-lg cursor-pointer sm:mt-0">
             <a href="#" target="_blank" class="pt-9 pb-7 text-xs font-bold text-blue-bell leading-6">
-              <span class="sr-only">Facebook</span>
-              <img src="./img/iconfinder-fb.svg" alt="" aria-hidden="true" focusable="false" class="h-6 w-6 mr-2 float-left">
+              <img src="./img/iconfinder-fb.svg" alt="Facebook" class="h-6 w-6 mr-2 float-left">
               @szymon
             </a>
             <p class="text-6xl font-bold text-navyDark-primary dark:text-white-lilac">
@@ -69,8 +68,7 @@
           <article class="flex flex-col justify-center items-center w-full mb-6  border-t-4 rounded-md border-blue-dodgerLight bg-white-lilac transition ease-in-out duration-500 
           dark:bg-navyDark-secondary hover:bg-gray-athens dark:hover:bg-navyDark-tertiary cursor-pointer shadow-lg lg:mr-6">
             <a href="#" target="_blank" class="pt-9 pb-7 text-xs font-bold text-blue-bell leading-6">
-              <span class="sr-only">Twitter</span>
-              <img src="./img/iconfinder-twitter.svg" alt="" aria-hidden="true" focusable="false" class="h-6 w-6 mr-2 float-left">
+              <img src="./img/iconfinder-twitter.svg" alt="Twitter" class="h-6 w-6 mr-2 float-left">
               @szymon
             </a>
             <p class="text-6xl font-bold text-navyDark-primary dark:text-white-lilac">
@@ -92,8 +90,7 @@
         <div class="w-full sm:flex">
           <article class="w-full flex flex-col justify-center items-center mb-6 mr-6 border-t-4 rounded-md border-red-valencia transition ease-in-out duration-500 bg-white-lilac dark:bg-navyDark-secondary hover:bg-gray-athens dark:hover:bg-navyDark-tertiary cursor-pointer shadow-lg">
             <a href="#" target="_blank" class="pt-9 pb-7 text-xs font-bold text-blue-bell leading-6">
-              <span class="sr-only">Instagram</span>
-              <img src="./img/instagram.svg" alt="" aria-hidden="true" focusable="false" class="h-6 w-6 mr-2 float-left">
+              <img src="./img/instagram.svg" alt="Instagram" class="h-6 w-6 mr-2 float-left">
               @szymon
             </a>
             <p class="text-6xl font-bold text-navyDark-primary dark:text-white-lilac">
@@ -113,8 +110,7 @@
 
           <article class="flex flex-col justify-center items-center w-full mb-6  border-t-4 rounded-md border-red-monza transition ease-in-out duration-500 bg-white-lilac dark:bg-navyDark-secondary hover:bg-gray-athens dark:hover:bg-navyDark-tertiary cursor-pointer shadow-lg">
             <a href="#" target="_blank" class="pt-9 pb-7 text-xs font-bold text-blue-bell leading-6">
-              <span class="sr-only">Youtube</span>
-              <img src="./img/youtube.svg" alt="" aria-hidden="true" focusable="false" class="h-6 w-6 mr-2 float-left">
+              <img src="./img/youtube.svg" alt="YouTube" class="h-6 w-6 mr-2 float-left">
               @szymon
             </a>
             <p class="text-6xl font-bold text-navyDark-primary dark:text-white-lilac">
@@ -146,11 +142,11 @@
                 <article class="w-full mr-6 px-6 py-6 mb-4 rounded-md transition-colors ease-in-out duration-500 bg-white-lilac dark:bg-navyDark-secondary hover:bg-gray-athens dark:hover:bg-navyDark-tertiary cursor-pointer shadow-md md:mb-6">
                   <div class="flex justify-between w-full pb-6 ">
                     <h3 class="text-sm font-bold text-blue-bell">
+                      <span class="sr-only">Facebook</span>
                       Page Views
                     </h3>
                     <a href="#" target="_blank">
-                      <span class="sr-only">Facebook</span>
-                      <img src="./img/iconfinder-fb.svg" alt="" aria-hidden="true" focusable="false" class="h-6 w-6 transition ease-in duration-200 transform hover:scale-150 motion-reduce:transform-none">
+                      <img src="./img/iconfinder-fb.svg" alt="Facebook" class="h-6 w-6 transition ease-in duration-200 transform hover:scale-150 motion-reduce:transform-none">
                     </a>
                   </div>
                   <div class="flex justify-between relative">
@@ -159,7 +155,7 @@
                     </p>
                     <div class="flex absolute bottom-0 right-0">
                       <span class="sr-only">The number of page views has increased</span>
-                      <img src="./img/triangle-up.svg" alt="triangle-up" aria-hidden="true" focusable="false" class="h-1.5 w-1.5 mt-1 mr-1 pt-0.5 md:pt-0">
+                      <img src="./img/triangle-up.svg" alt="" class="h-1.5 w-1.5 mt-1 mr-1 pt-0.5 md:pt-0">
                       <p class="text-xs font-bold text-green-mountainMeadow">
                         3%
                       </p>
@@ -170,11 +166,11 @@
                 <article class="w-full px-6 py-6 mb-4 rounded-md transition-colors ease-in-out duration-500 bg-white-lilac dark:bg-navyDark-secondary hover:bg-gray-athens dark:hover:bg-navyDark-tertiary cursor-pointer shadow-md md:mb-6 lg:mr-6">
                   <div class="flex justify-between w-full pb-6">
                     <h3 class="text-sm font-bold text-blue-bell">
+                      <span class="sr-only">Facebook</span>
                       Likes
                     </h3>
                     <a href="#" target="_blank">
-                      <span class="sr-only">Facebook</span>
-                      <img src="./img/iconfinder-fb.svg" alt="" aria-hidden="true" focusable="false" class="h-6 w-6 transition ease-in duration-200 transform hover:scale-150 motion-reduce:transform-none">
+                      <img src="./img/iconfinder-fb.svg" alt="Facebook" class="h-6 w-6 transition ease-in duration-200 transform hover:scale-150 motion-reduce:transform-none">
                     </a>
                   </div>
                   <div class="flex justify-between relative">
@@ -183,7 +179,7 @@
                     </p>
                     <div class="flex absolute bottom-0 right-0">
                       <span class="sr-only">The number of likes has decreased</span>
-                      <img src="./img/triangle-down.svg" alt="triangle-down" aria-hidden="true" focusable="false" class="h-1.5 w-1.5 mt-1 mr-1 pt-0.5 md:pt-0">
+                      <img src="./img/triangle-down.svg" alt="" class="h-1.5 w-1.5 mt-1 mr-1 pt-0.5 md:pt-0">
                     <p class="text-xs font-bold text-red-monza">
                       2%
                     </p>
@@ -197,11 +193,11 @@
                 <article class="w-full mr-6 px-6 py-6 mb-4 rounded-md transition-colors ease-in-out duration-500 bg-white-lilac dark:bg-navyDark-secondary hover:bg-gray-athens dark:hover:bg-navyDark-tertiary cursor-pointer shadow-md md:mb-6">
                   <div class="flex justify-between w-full pb-6">
                     <h3 class="text-sm font-bold text-blue-bell">
+                      <span class="sr-only">Instagram</span>
                       Likes
                     </h3>
                     <a href="#" target="_blank">
-                      <span class="sr-only">Instagram</span>
-                      <img src="./img/instagram.svg" alt="" aria-hidden="true" focusable="false" class="h-6 w-6 transition ease-in duration-200 transform hover:scale-150 motion-reduce:transform-none">
+                      <img src="./img/instagram.svg" alt="Instagram" class="h-6 w-6 transition ease-in duration-200 transform hover:scale-150 motion-reduce:transform-none">
                     </a>
                   </div>
                   <div class="flex justify-between relative">
@@ -210,7 +206,7 @@
                     </p>
                     <div class="flex absolute bottom-0 right-0">
                       <span class="sr-only">The number of likes has increased</span>
-                      <img src="./img/triangle-up.svg" alt="triangle-up" aria-hidden="true" focusable="false" class="h-1.5 w-1.5 mt-1 mr-1 pt-0.5 md:pt-0">
+                      <img src="./img/triangle-up.svg" alt="" class="h-1.5 w-1.5 mt-1 mr-1 pt-0.5 md:pt-0">
                       <p class="text-xs font-bold text-green-mountainMeadow">
                         2257%
                       </p>
@@ -221,11 +217,11 @@
                 <article class="w-full px-6 py-6 mb-4 rounded-md transition-colors ease-in-out duration-500 bg-white-lilac dark:bg-navyDark-secondary hover:bg-gray-athens dark:hover:bg-navyDark-tertiary cursor-pointer shadow-md md:mb-6">
                   <div class="flex justify-between w-full pb-6 ">
                     <h3 class="text-sm font-bold text-blue-bell">
+                      <span class="sr-only">Instagram</span>
                       Profile Views
                     </h3>
                     <a href="#" target="_blank">
-                      <span class="sr-only">Instagram</span>
-                      <img src="./img/instagram.svg" alt="" aria-hidden="true" focusable="false" class="h-6 w-6 transition ease-in duration-200 transform hover:scale-150 motion-reduce:transform-none">
+                      <img src="./img/instagram.svg" alt="Instagram" class="h-6 w-6 transition ease-in duration-200 transform hover:scale-150 motion-reduce:transform-none">
                     </a>
                   </div>
                   <div class="flex justify-between relative">
@@ -234,7 +230,7 @@
                     </p>
                     <div class="flex absolute bottom-0 right-0">
                       <span class="sr-only">The number of profile views has increased</span>
-                      <img src="./img/triangle-up.svg" alt="triangle-up" aria-hidden="true" focusable="false" class="h-1.5 w-1.5 mt-1 mr-1 pt-0.5 md:pt-0">
+                      <img src="./img/triangle-up.svg" alt="" class="h-1.5 w-1.5 mt-1 mr-1 pt-0.5 md:pt-0">
                       <p class="text-xs font-bold text-green-mountainMeadow">
                         1375%
                       </p>
@@ -250,11 +246,12 @@
                 <article class="w-full mr-6 px-6 py-6 mb-4 rounded-md transition-colors ease-in-out duration-500 bg-white-lilac dark:bg-navyDark-secondary hover:bg-gray-athens dark:hover:bg-navyDark-tertiary cursor-pointer shadow-md md:mb-6">
                   <div class="flex justify-between w-full pb-6">
                     <h3 class="text-sm font-bold text-blue-bell">
+                      <span class="sr-only">Twitter</span>
                       Retweets
                     </h3>
                     <a href="#" target="_blank">
                       <span class="sr-only">Twitter</span>
-                      <img src="./img/iconfinder-twitter.svg" alt="" aria-hidden="true" focusable="false" class="h-6 w-6 transition ease-in duration-200 transform hover:scale-150 motion-reduce:transform-none">
+                      <img src="./img/iconfinder-twitter.svg" alt="Twitter" class="h-6 w-6 transition ease-in duration-200 transform hover:scale-150 motion-reduce:transform-none">
                     </a>
                   </div>
                   <div class="flex justify-between relative">
@@ -263,7 +260,7 @@
                     </p>
                     <div class="flex absolute bottom-0 right-0">
                       <span class="sr-only">The number of retweets has increased</span>
-                      <img src="./img/triangle-up.svg" alt="triangle-up" aria-hidden="true" focusable="false" class="h-1.5 w-1.5 mt-1 mr-1 pt-0.5 md:pt-0">
+                      <img src="./img/triangle-up.svg" alt="" class="h-1.5 w-1.5 mt-1 mr-1 pt-0.5 md:pt-0">
                       <p class="text-xs font-bold text-green-mountainMeadow">
                       303%
                       </p>
@@ -274,11 +271,11 @@
                 <article class="w-full px-6 py-6 mb-4 rounded-md transition-colors ease-in-out duration-500 bg-white-lilac dark:bg-navyDark-secondary hover:bg-gray-athens dark:hover:bg-navyDark-tertiary cursor-pointer shadow-md md:mb-6 lg:mr-6">
                   <div class="flex justify-between w-full pb-6">
                     <h3 class="text-sm font-bold text-blue-bell">
+                      <span class="sr-only">Twitter</span>
                       Likes
                     </h3>
                     <a href="#" target="_blank">
-                      <span class="sr-only">Twitter</span>
-                      <img src="./img/iconfinder-twitter.svg" alt="" aria-hidden="true" focusable="false" class="h-6 w-6 transition ease-in duration-200 transform hover:scale-150 motion-reduce:transform-none">
+                      <img src="./img/iconfinder-twitter.svg" alt="Twitter" class="h-6 w-6 transition ease-in duration-200 transform hover:scale-150 motion-reduce:transform-none">
                     </a>
                   </div>
                   <div class="flex justify-between relative">
@@ -287,7 +284,7 @@
                     </p>
                     <div class="flex absolute bottom-0 right-0">
                       <span class="sr-only">The number of likes has increased</span>
-                      <img src="./img/triangle-up.svg" alt="triangle-up" aria-hidden="true" focusable="false" class="h-1.5 w-1.5 mt-1 mr-1 pt-0.5 md:pt-0">
+                      <img src="./img/triangle-up.svg" alt="" class="h-1.5 w-1.5 mt-1 mr-1 pt-0.5 md:pt-0">
                       <p class="text-xs font-bold text-green-mountainMeadow">
                       553%
                       </p>
@@ -301,11 +298,11 @@
                 <article class="w-full mr-6 px-6 py-6 mb-4 rounded-md transition-colors ease-in-out duration-500 bg-white-lilac dark:bg-navyDark-secondary hover:bg-gray-athens dark:hover:bg-navyDark-tertiary cursor-pointer shadow-md md:mb-6">
                   <div class="flex justify-between w-full pb-6">
                     <h3 class="text-sm font-bold text-blue-bell">
+                      <span class="sr-only">YouTube</span>
                       Likes
                     </h3>
                     <a href="#" target="_blank">
-                      <span class="sr-only">Youtube</span>
-                      <img src="./img/youtube.svg" alt="" aria-hidden="true" focusable="false" class="h-6 w-6 transition ease-in duration-200 transform hover:scale-150 motion-reduce:transform-none">
+                      <img src="./img/youtube.svg" alt="YouTube" class="h-6 w-6 transition ease-in duration-200 transform hover:scale-150 motion-reduce:transform-none">
                     </a>
                   </div>
                   <div class="flex justify-between relative">
@@ -314,7 +311,7 @@
                     </p>
                     <div class="flex absolute bottom-0 right-0">
                       <span class="sr-only">The number of likes has decreased</span>
-                      <img src="./img/triangle-down.svg" alt="triangle-down" aria-hidden="true" focusable="false" class="h-1.5 w-1.5 mt-1 mr-1 pt-0.5 md:pt-0">
+                      <img src="./img/triangle-down.svg" alt="" class="h-1.5 w-1.5 mt-1 mr-1 pt-0.5 md:pt-0">
                       <p class="text-xs font-bold text-red-monza">
                       19%
                       </p>
@@ -325,11 +322,11 @@
                 <article class="w-full px-6 py-6 mb-4 rounded-md transition-colors ease-in-out duration-500 bg-white-lilac dark:bg-navyDark-secondary hover:bg-gray-athens dark:hover:bg-navyDark-tertiary cursor-pointer shadow-md md:mb-6">
                   <div class="flex justify-between w-full pb-6">
                     <h3 class="text-sm font-bold text-blue-bell">
+                      <span class="sr-only">YouTube</span>
                       Total Views
                     </h3>
                     <a href="#" target="_blank">
-                      <span class="sr-only">Youtube</span>
-                      <img src="./img/youtube.svg" alt="" aria-hidden="true" focusable="false" class="h-6 w-6 transition ease-in duration-200 transform hover:scale-150 motion-reduce:transform-none">
+                      <img src="./img/youtube.svg" alt="YouTube" class="h-6 w-6 transition ease-in duration-200 transform hover:scale-150 motion-reduce:transform-none">
                     </a>
                   </div>
                   <div class="flex justify-between relative">
@@ -338,7 +335,7 @@
                     </p>
                     <div class="flex absolute bottom-0 right-0">
                       <span class="sr-only">The number of total views has decreased</span>
-                      <img src="./img/triangle-down.svg" alt="triangle-down" aria-hidden="true" focusable="false" class="h-1.5 w-1.5 mt-1 mr-1 pt-0.5 md:pt-0">
+                      <img src="./img/triangle-down.svg" alt="" class="h-1.5 w-1.5 mt-1 mr-1 pt-0.5 md:pt-0">
                       <p class="text-xs font-bold text-red-monza">
                       12%
                       </p>
