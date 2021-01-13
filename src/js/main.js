@@ -18,7 +18,8 @@
     localStorage.setItem( 'theme', 'light');
   }
 
- // get user preferences theme
+ // get user preferences theme:
+
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window. matchMedia('(prefers-color-scheme: dark)').matches)) {
       switchOnDark(); 
       localStorage.clear();
@@ -41,6 +42,8 @@
 switcherMode.addEventListener( 'click', toggleButton );
 
 console.log(checkMode);
+
+// prevent reloading:
 
 document.addEventListener('load', () => {
   if (checkMode === 'dark') {
