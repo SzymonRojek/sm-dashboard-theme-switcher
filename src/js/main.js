@@ -2,10 +2,7 @@
   const switcherMode = document.getElementById( 'switcher-mode' );
   const htmlClasses = document.querySelector( 'html' ).classList;
   const textMode = document.querySelector( '.phrase' );
-  // let darkMode = localStorage.getItem('theme');
-  // console.log(darkMode);
-
-  localStorage.clear()
+  let checkMode = localStorage.getItem('theme');
 
   const switchOnDark = () => {
     htmlClasses.add( 'dark' );
@@ -18,37 +15,39 @@
     htmlClasses.remove( 'dark' );
     switcherMode.setAttribute( 'aria-checked', false );
     textMode.textContent = 'dark';
-    localStorage.setItem( 'theme', null);
-    // localStorage.removeItem( 'theme' );
-    // localStorage.clear()
+    localStorage.setItem( 'theme', 'light');
   }
 
-  if ((window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    switchOnDark();
-  } else {
-    switchOffDark();
-  } 
-
-const toggleButton = () => {
-    if( localStorage.getItem('theme') !== 'dark') {
-      switchOnDark();
+ // get user preferences theme
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window. matchMedia('(prefers-color-scheme: dark)').matches)) {
+      switchOnDark(); 
+      localStorage.clear();
     } else {
       switchOffDark();
+      localStorage.clear();
     }
-    console.log(localStorage);
+  
+  const toggleButton = () => {
+    if( checkMode !== 'dark') {
+      switchOnDark();
+      checkMode = localStorage.getItem( 'theme' );
+      } else {
+      switchOffDark();
+      checkMode = localStorage.getItem( 'theme' );
+    }
+    console.log(checkMode);
 }
 
-switcherMode.addEventListener( 'click', toggleButton);
+switcherMode.addEventListener( 'click', toggleButton );
 
-  // function reload() {
-  //   if(localStorage.getItem('theme') !== 'dark') {
-  //     switchOffDark();
-  //   } else {
-  //     switchOnDark();
-  //   } 
-  // }
-  
-  // reload();
+console.log(checkMode);
 
-
-// (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches))
+document.addEventListener('load', () => {
+  if (checkMode === 'dark') {
+    switchOnDark();
+    localStorage.clear()
+  } else {
+    switchOnDark();
+    localStorage.clear()
+  }
+});
