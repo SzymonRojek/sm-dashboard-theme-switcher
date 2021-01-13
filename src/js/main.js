@@ -1,72 +1,54 @@
 
-(() => {
-  'use strict'
-
   const switcherMode = document.getElementById( 'switcher-mode' );
   const htmlClasses = document.querySelector( 'html' ).classList;
   const textMode = document.querySelector( '.phrase' );
+  // let darkMode = localStorage.getItem('theme');
+  // console.log(darkMode);
 
+  localStorage.clear()
 
-  function switchOn() {
+  const switchOnDark = () => {
     htmlClasses.add( 'dark' );
     switcherMode.setAttribute( 'aria-checked', true );
     textMode.textContent = 'light';
     localStorage.setItem( 'theme', 'dark' );
   }
 
-  function switchOff() {
+  const switchOffDark = () => {
     htmlClasses.remove( 'dark' );
     switcherMode.setAttribute( 'aria-checked', false );
     textMode.textContent = 'dark';
-    localStorage.removeItem( 'theme' );
+    localStorage.setItem( 'theme', null);
+    // localStorage.removeItem( 'theme' );
+    // localStorage.clear()
   }
 
-  function setPreferentialTheme() {
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.querySelector('html').classList.add('dark')
-    } else {
-      document.querySelector('html').classList.remove('dark');
-    }
-  }
-  setPreferentialTheme();
-
-  const toggleButton = () => {
-      if( localStorage.getItem( 'theme' ) === 'dark') {
-        switchOff();
-      } else {
-        switchOn();
-      }
-  }
-
-  switcherMode.addEventListener( 'click', ( event ) => {
-    toggleButton( event.target );
-  }, false)
-
-
-// keep the choosen theme when the page has been reloaded:
-  if (localStorage.getItem( 'theme' ) === 'dark') {
-    switchOn();
+  if ((window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    switchOnDark();
   } else {
-   switchOff();
-  }
+    switchOffDark();
+  } 
 
-})();
+const toggleButton = () => {
+    if( localStorage.getItem('theme') !== 'dark') {
+      switchOnDark();
+    } else {
+      switchOffDark();
+    }
+    console.log(localStorage);
+}
+
+switcherMode.addEventListener( 'click', toggleButton);
+
+  // function reload() {
+  //   if(localStorage.getItem('theme') !== 'dark') {
+  //     switchOffDark();
+  //   } else {
+  //     switchOnDark();
+  //   } 
+  // }
+  
+  // reload();
 
 
-
-// On page load or when changing themes, best to add inline in `head` to avoid FOUC
-
-// if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-//   document.querySelector('html').classList.add('dark')
-// } else {
-//   document.querySelector('html').classList.remove('dark')
-// }
-
-// Whenever the user explicitly chooses light mode
-// localStorage.theme = 'light'
-
-// Whenever the user explicitly chooses dark mode
-// localStorage.theme = 'dark'
-
-// Whenever the user explicitly chooses to respect the OS preference
-// localStorage.removeItem('theme')
+// (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches))
