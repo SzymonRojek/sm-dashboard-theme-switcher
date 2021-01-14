@@ -1,53 +1,36 @@
-
-// get mode user's preferences ;
-// switch mode manually;
-// when the page reloaded choosen mode cannot change;
-// when dark mode is one aria-checked => true
-
-
-let darkMode = localStorage.getItem( 'theme' );
-const switcherMode = document.getElementById( 'switcher-mode' );
-const htmlClasses = document.querySelector( 'html' ).classList;
-const textMode = document.querySelector( '.phrase' );
-
-function checkDarkMode() {
-  if ( window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ) {
-    return true;
-  }
-  return false;
-}
+const switcherMode = document.getElementById('switcher-mode');
+const htmlClasses = document.querySelector('html').classList;
+const textMode = document.querySelector('.phrase');
 
 const enableDarkMode = () => {
-  localStorage.setItem( 'theme', 'dark' ); 
-  htmlClasses.add( 'dark' );
+  sessionStorage.setItem('theme', 'dark');
+  htmlClasses.add('dark');
   textMode.textContent = 'light';
+  switcherMode.setAttribute('aria-checked', true);
 }
 
 const disableDarkMode = () => {
-
-  localStorage.setItem( 'theme', 'light' ); 
-  htmlClasses.remove( 'dark' );
+  sessionStorage.setItem('theme', 'light');
+  htmlClasses.remove('dark');
   textMode.textContent = 'dark';
+  switcherMode.setAttribute('aria-checked', false);
 }
 
-if ( checkDarkMode() ) {
-  enableDarkMode();
-} else {
-  disableDarkMode();
+function checkDarkMode() {
+  const theme = sessionStorage.getItem('theme');
+  if (theme) {
+    theme === 'dark' ? enableDarkMode() : disableDarkMode();
+    return;
+  }
+  const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  prefersDarkMode ? enableDarkMode() : disableDarkMode();
 }
 
+checkDarkMode();
 
 const toggleButton = () => {
-  darkMode = localStorage.getItem( 'theme' );
-
-  let pressed = switcherMode.getAttribute( 'aria-checked' ) === 'true';
-  switcherMode.setAttribute( 'aria-checked', !pressed );
-  
-    if( !pressed && darkMode !== 'dark' ) {
-      enableDarkMode();
-    } else {
-      disableDarkMode();
-    }
+  const theme = sessionStorage.getItem('theme');
+  theme === 'light' ? enableDarkMode() : disableDarkMode();
 }
 
-switcherMode.addEventListener( 'click', toggleButton);
+switcherMode.addEventListener('click', toggleButton);
