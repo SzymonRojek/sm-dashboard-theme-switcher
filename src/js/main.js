@@ -17,6 +17,7 @@ const disableDarkMode = () => {
 }
 
 function checkDarkMode() {
+  
   const theme = sessionStorage.getItem('theme');
   if (theme) {
     theme === 'dark' ? enableDarkMode() : disableDarkMode();
