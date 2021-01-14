@@ -1,56 +1,53 @@
 
-  const switcherMode = document.getElementById( 'switcher-mode' );
-  const htmlClasses = document.querySelector( 'html' ).classList;
-  const textMode = document.querySelector( '.phrase' );
-  let checkMode = localStorage.getItem('theme');
+// get mode user's preferences ;
+// switch mode manually;
+// when the page reloaded choosen mode cannot change;
+// when dark mode is one aria-checked => true
 
-  const switchOnDark = () => {
-    htmlClasses.add( 'dark' );
-    switcherMode.setAttribute( 'aria-checked', true );
-    textMode.textContent = 'light';
-    localStorage.setItem( 'theme', 'dark' );
+
+let darkMode = localStorage.getItem( 'theme' );
+const switcherMode = document.getElementById( 'switcher-mode' );
+const htmlClasses = document.querySelector( 'html' ).classList;
+const textMode = document.querySelector( '.phrase' );
+
+function checkDarkMode() {
+  if ( window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ) {
+    return true;
   }
-
-  const switchOffDark = () => {
-    htmlClasses.remove( 'dark' );
-    switcherMode.setAttribute( 'aria-checked', false );
-    textMode.textContent = 'dark';
-    localStorage.setItem( 'theme', 'light');
-  }
-
- // get user preferences theme:
-
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window. matchMedia('(prefers-color-scheme: dark)').matches)) {
-      switchOnDark(); 
-      localStorage.clear();
-    } else {
-      switchOffDark();
-      localStorage.clear();
-    }
-  
-  const toggleButton = () => {
-    if( checkMode !== 'dark') {
-      switchOnDark();
-      checkMode = localStorage.getItem( 'theme' );
-      } else {
-      switchOffDark();
-      checkMode = localStorage.getItem( 'theme' );
-    }
-    console.log(checkMode);
+  return false;
 }
 
-switcherMode.addEventListener( 'click', toggleButton );
+const enableDarkMode = () => {
+  localStorage.setItem( 'theme', 'dark' ); 
+  htmlClasses.add( 'dark' );
+  textMode.textContent = 'light';
+}
 
-console.log(checkMode);
+const disableDarkMode = () => {
 
-// prevent reloading:
+  localStorage.setItem( 'theme', 'light' ); 
+  htmlClasses.remove( 'dark' );
+  textMode.textContent = 'dark';
+}
 
-document.addEventListener('load', () => {
-  if (checkMode === 'dark') {
-    switchOnDark();
-    localStorage.clear()
-  } else {
-    switchOnDark();
-    localStorage.clear()
-  }
-});
+if ( checkDarkMode() ) {
+  enableDarkMode();
+} else {
+  disableDarkMode();
+}
+
+
+const toggleButton = () => {
+  darkMode = localStorage.getItem( 'theme' );
+
+  let pressed = switcherMode.getAttribute( 'aria-checked' ) === 'true';
+  switcherMode.setAttribute( 'aria-checked', !pressed );
+  
+    if( !pressed && darkMode !== 'dark' ) {
+      enableDarkMode();
+    } else {
+      disableDarkMode();
+    }
+}
+
+switcherMode.addEventListener( 'click', toggleButton);
