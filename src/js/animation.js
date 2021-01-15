@@ -6,7 +6,7 @@ const easeOutQuad = t => t * ( 2 - t );
 const animateUpdateFollowers = el => {
   let frame = 0;
   const countTo = parseInt( el.innerHTML, 10 );
-  
+
   const counter = setInterval( () => {
     frame++;
     const progress = easeOutQuad( frame / totalFrames );
@@ -23,7 +23,7 @@ const animateUpdateFollowers = el => {
 };
 
 const updateFollowers = () => {
-  const updatedFollowersNum = document.querySelectorAll( '.heading-num' );
+  const updatedFollowersNum = document.querySelectorAll( '.count-followers' );
   updatedFollowersNum.forEach( animateUpdateFollowers );
 };
 
