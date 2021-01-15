@@ -10,6 +10,7 @@
 ## **For this project I've used:
 - Semantic tags and attributes;
 - Invisible content for Screen Reader users;
+- 
 - Flexbox;
 - RWD, mobile first;
 
@@ -18,6 +19,7 @@
 - manually switching the mode between light/dark (smooth transition);
 - when the page has been reloaded manually chosen mode has to stay the same;
 - use the **sessionStorage** (when the session is finished then as a default will be theme chosen by the user in the "system preferences")
+- added animation updating total followers and social media in the main section;
 
 **Conclusion:**
 This is my first project with the Tailwindcss framework. I have enjoyed so I would like to expand my knowledge in this area.
