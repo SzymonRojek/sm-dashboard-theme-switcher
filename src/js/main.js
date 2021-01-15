@@ -41,3 +41,21 @@
   switcherMode.addEventListener('click', toggleButton);
 
 })();
+
+
+// animation counting followers
+
+const totalFollowersNum = document.querySelector(".heading-num");
+
+  const updateFollowers = () => {
+    let target = +totalFollowersNum.dataset.target
+    const count = +totalFollowersNum.textContent; // 0
+
+  for (let i = count; i <= target; i++) {
+    setTimeout(() => {
+      totalFollowersNum.textContent = i;
+    }, 100);
+    }
+  }
+  updateFollowers();
+
