@@ -2,6 +2,12 @@ module.exports = {
   content: ['./src/**/*.html'],
   darkMode: 'class', // 'media' or true
   theme: {
+
+    boxShadow: {
+      // new: '11px 21px 44px -3px rgba(0,0,0,0.71)',
+      new1: '0 1px 5px #0061aa, inset 0 10px 20px #b6f9ff',
+      new2: '6px 8px 8px rgba(0,0,0,0.2), inset 0 10px 20px #b6f9ff',
+    },
     extend: {
       screens: {
         '2xl': '1440px',
@@ -56,7 +62,9 @@ module.exports = {
     }
   },
   variants: {
-   
+    extend:   {
+      backgroundColor: ['active'],
+    }
   },
 }
 
