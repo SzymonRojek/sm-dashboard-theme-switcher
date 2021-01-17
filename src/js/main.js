@@ -2,7 +2,7 @@
 (() => {
   'use strict'
 
-  const switcherMode = document.getElementById( 'switcher-mode' );
+  const switcherMode = document.querySelector( '#switcher-mode' );
   const htmlClasses = document.querySelector( 'html' ).classList;
   const textMode = document.querySelector( '.phrase' );
 

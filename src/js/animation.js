@@ -27,10 +27,10 @@
     }, frameDuration );
   };
 
-  const totalFollowers = document.querySelectorAll( '.count-followers' );
+  const totalFollowers = document.querySelector( '.count-followers' );
 
-  const updateFollowers = () => totalFollowers.forEach( animateUpdateFollowers );
+  animateUpdateFollowers(totalFollowers);
 
-  updateFollowers();
+  // for more selectors: forEach( animateUpdateFollowers )
 
 })();

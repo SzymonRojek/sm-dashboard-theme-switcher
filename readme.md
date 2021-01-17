@@ -19,7 +19,7 @@
 - manually switching the mode between light/dark (smooth transition);
 - when the page has been reloaded manually chosen mode has to stay the same;
 - use the **sessionStorage** (when the session is finished then as a default will be theme chosen by the user in the "system preferences")
-- add small animation updating total number of followers and followers in the main social media section (the main idea of this animation is copied from someone but I have changed it's content to get more readable code - I am working on my animation);
+- add small animation updating total number of followers (the main idea of this animation is made by web developer but I have changed it's content to get more readable code - I am working on my animation);
 - diploy project to Github Pages with GitHub Actions.
 
 **Conclusion:**
