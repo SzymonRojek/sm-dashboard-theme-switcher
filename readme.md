@@ -1,19 +1,19 @@
 # Social Media Dasboard & theme switcher
 
-## 🎥  Preview site [here](https://szymonrojek.github.io/sm-dashboard-theme-switcher/)
+## 🎥  Preview site :arrow_right: [here](https://szymonrojek.github.io/sm-dashboard-theme-switcher/)
 
-**Technologies used:**
+# Technologies used:
 * [x] Gulp
 * [x] Tailwindcss
 * [x] HTML, CSS, JS
 
-## **For this project I've used:
+## For this project I've used:
 - Semantic tags and attributes;
 - Invisible content for Screen Reader users;
 - Flexbox;
 - RWD, mobile first.
 
-**Main goals:**
+### Main goals:
 - semantics tags and attributes (semantics and their importance for accessibility);
 - detect if the user has requested the mode: light or dark; (prefers-color-scheme);
 - manually switching the mode between light/dark (smooth transition);
@@ -22,7 +22,7 @@
 - add small animation updating total number of followers (the main idea of this animation is made by web developer but I have changed it's content to get more readable code - I am working on my animation);
 - diploy project to Github Pages with GitHub Actions.
 
-**Conclusion:**
+## Conclusion:
 This is my first project with the Tailwindcss framework. I have enjoyed so I would like to expand my knowledge in this area.
 
 Instead of the toggle, I have used the button because I wanted to apply a different design pattern. The button changes the state (aria-checked) so the mode can be reverted too. It was a good experience for me and now as a toggle, it is better to use the radio button because of express explicit state or even the checkbox, but button could be used as a last resort. 
