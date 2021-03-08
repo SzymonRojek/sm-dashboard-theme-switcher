@@ -13,6 +13,7 @@
 - Flexbox;
 - RWD, mobile first.
 
+
 ### Main goals:
 - semantics tags and attributes (semantics and their importance for accessibility);
 - detect if the user has requested the mode: light or dark; (prefers-color-scheme);
